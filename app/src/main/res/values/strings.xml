@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">StaticFragment</string>
+    <string name="cadena_html">&lt;html&gt;
+            &lt;body&gt;
+                &lt;h1&gt;  Hola caracola  &lt;/h1&gt;
+            &lt;/body&gt;
+        &lt;/html&gt;</string>
+    <string name="cadena_htmlalter">
+        <![CDATA[
+        <h1>static fragment</h1>
+        <h2>Ejercicio fragment statico</h2>
+        <p>este ejercicio muestra el ejemplo de un fragmen</p>
+        <ul>
+            <li>1</li>
+            <li>2</li>
+        </ul>
+        ]]>
+    </string>
+</resources>
