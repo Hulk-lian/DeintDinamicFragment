@@ -1,4 +1,4 @@
-package com.jtcode.staticfragment;
+package com.jtcode.dinamicfragment;
 
 import android.app.Fragment;
 import android.os.Bundle;
@@ -12,6 +12,18 @@ import android.widget.TextView;
 public class FragmentB extends Fragment {
 
     private TextView txv;
+    public static final String TEXTKEY="text";//no deberian de estar aqui deberian de estar en la activity
+    public static final String SIZE_KEY="size";
+
+    public static FragmentB newInstance(Bundle args) {
+
+        FragmentB fragmentB= new FragmentB();
+
+        if(fragmentB!=null) {
+            fragmentB.setArguments(args);
+        }
+        return fragmentB;
+    }
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -21,6 +33,11 @@ public class FragmentB extends Fragment {
 
         if(rootView!=null){
             txv=(TextView)rootView.findViewById(R.id.txvTextorecibido);
+            Bundle b=getArguments();
+            if(b!= null) {
+                txv.setText(b.getString(TEXTKEY));
+                txv.setTextSize(b.getInt(SIZE_KEY));
+            }
         }
         return rootView;
     }
@@ -29,10 +46,10 @@ public class FragmentB extends Fragment {
      * @param text texto que se quiere mostrar
      * @param fonSize tamaño del texto
      */
-    public void changeTextProperties(String text,int fonSize){
+    /*public void changeTextProperties(String text,int fonSize){
         txv.setText(text);
         txv.setTextSize(fonSize);
-    }
+    }*/
 
     @Override
     public void onSaveInstanceState(Bundle outState) {

@@ -8,40 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.jtcode.staticfragment.Main_Activity"
-    android:orientation="vertical">
+    tools:context="com.jtcode.dinamicfragment.Main_Activity">
 
-    <fragment
-        android:name="com.jtcode.staticfragment.FragmentA"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/fragA"
-        tools:layout="@layout/fragment_a">
-
-    </fragment>
-
-    <fragment
-        android:name="com.jtcode.staticfragment.FragmentB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/fragA"
-        android:layout_alignEnd="@id/fragA"
-        android:layout_alignRight="@id/fragA"
-        android:id="@+id/fragB"
-        android:layout_alignParentLeft="true"
-        android:layout_marginTop="15dp"
-        tools:layout="@layout/fragment_b">
-
-    </fragment>
-
-    <fragment
-        android:name="com.jtcode.staticfragment.FragmentC"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_toRightOf="@id/fragB"
-        android:id="@+id/fragC"
-        tools:layout="@layout/fragment_c">
-
-    </fragment>
 
 </RelativeLayout>

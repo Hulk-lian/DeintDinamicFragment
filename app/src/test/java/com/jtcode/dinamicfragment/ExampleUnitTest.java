@@ -1,4 +1,4 @@
-package com.jtcode.staticfragment;
+package com.jtcode.dinamicfragment;
 
 import org.junit.Test;
 

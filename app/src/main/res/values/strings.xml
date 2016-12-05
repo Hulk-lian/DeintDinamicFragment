@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">StaticFragment</string>
+    <string name="app_name">DinamicFragment</string>
     <string name="cadena_html">&lt;html&gt;
             &lt;body&gt;
                 &lt;h1&gt;  Hola caracola  &lt;/h1&gt;

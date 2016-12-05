@@ -1,8 +1,7 @@
-package com.jtcode.staticfragment;
+package com.jtcode.dinamicfragment;
 
 import android.app.Activity;
 import android.app.Fragment;
-import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -27,12 +26,12 @@ public class FragmentA extends Fragment {
     }
 
     @Override
-    public void onAttach(Activity context) {
-        super.onAttach(context);
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
         try{
-            mCallBack=(FragmentIterationLisener)context;
+            mCallBack=(FragmentIterationLisener)activity;
         }catch (ClassCastException e){
-            throw new ClassCastException(context.toString()+ " must implment FragmentIterationListener");
+            throw new ClassCastException(activity.toString()+ " must implment FragmentIterationListener");
         }
     }
 

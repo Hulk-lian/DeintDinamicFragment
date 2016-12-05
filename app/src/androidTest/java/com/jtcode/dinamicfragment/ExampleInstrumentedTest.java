@@ -1,4 +1,4 @@
-package com.jtcode.staticfragment;
+package com.jtcode.dinamicfragment;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
