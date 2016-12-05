@@ -1,6 +1,7 @@
 package com.jtcode.dinamicfragment;
 
 import android.app.Activity;
+import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
 
@@ -13,8 +14,14 @@ public class Main_Activity extends Activity implements FragmentA.FragmentIterati
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_);
-        fragmentA=new FragmentA();
-        getFragmentManager().beginTransaction().add(R.id.activity_main_,fragmentA).commit();
+        FragmentManager fm= getFragmentManager();
+
+        fragmentA = (FragmentA)fm.findFragmentByTag(FragmentA.TAG_FRAGA);
+
+        if(fragmentA==null) {
+            fragmentA= new FragmentA();
+            getFragmentManager().beginTransaction().add(R.id.activity_main_, fragmentA,FragmentA.TAG_FRAGA).commit();
+        }
     }
 
     @Override

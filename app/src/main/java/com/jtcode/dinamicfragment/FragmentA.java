@@ -19,10 +19,18 @@ public class FragmentA extends Fragment {
     private Button btnSend;
     private SeekBar skvalues;
     private FragmentIterationLisener mCallBack;
+    public static final String TAG_FRAGA="fa";
+
 
     //interfaz para la comunicacion de los diferentes fragments
     public interface  FragmentIterationLisener{
         void onFragmentIterationListener(String text,int value);
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setRetainInstance(true);
     }
 
     @Override

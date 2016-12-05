@@ -14,6 +14,12 @@ public class FragmentB extends Fragment {
     private TextView txv;
     public static final String TEXTKEY="text";//no deberian de estar aqui deberian de estar en la activity
     public static final String SIZE_KEY="size";
+    public static final String TAG_FRAGB="fb";
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setRetainInstance(true);
+    }
 
     public static FragmentB newInstance(Bundle args) {
 
@@ -24,6 +30,7 @@ public class FragmentB extends Fragment {
         }
         return fragmentB;
     }
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
